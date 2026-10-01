@@ -9,6 +9,7 @@ version = "0.1.0"
 build = "bash build/build.sh"
 test = "python -m pytest tests -q"
 bench = "flock /tmp/mojo-bench.lock python bench/bench.py"
+install-upstream = { cmd = "python build/install_upstream.py", description = "Build upstream torch-sparse from source for parity testing" }
 
 [activation.env]
 PYTHONPATH = "python"
@@ -20,3 +21,6 @@ pytest = "*"
 numpy = "*"
 scipy = "*"
 pytorch-cpu = "*"
+pip = "*"
+cmake = "*"
+compilers = "*"
